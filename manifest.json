@@ -1,0 +1,31 @@
+{
+  "name": "Remove your tab",
+  "manifest_version": 2,
+  "version": "0.1",
+
+
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "content_scripts": [{
+      "matches": [ "<all_urls>" ],
+      "js": ["jquery.js"]
+    }],
+
+
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "http://*/*, https://*/*",
+    "system.display"
+
+ ]
+
+
+
+}
